@@ -8,6 +8,8 @@ import { WeatherApiService } from '../weather-api.service';
   styleUrls: ['./weather-search.component.css'],
 })
 export class WeatherSearchComponent {
+  weatherData: any;
+
   constructor(private weatherApiService: WeatherApiService) {}
 
   userInputLocationForm = new FormGroup({
@@ -19,6 +21,8 @@ export class WeatherSearchComponent {
       location: this.userInputLocationForm.value.location ?? '',
     };
 
-    this.weatherApiService.getWeather(newLocation.location);
+    this.weatherApiService
+      .getWeather(newLocation.location)
+      .subscribe((returnData) => (this.weatherData = returnData));
   }
 }
