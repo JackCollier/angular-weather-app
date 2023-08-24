@@ -1,9 +1,13 @@
 <div>
-  <h3>Location Search</h3>
-
-  <form [formGroup]="userInputLocationForm" (submit)="submitLocationSearch()">
-    <label for="location">Location:</label>
-    <input type="text" id="location" formControlName="location" />
-    <button type="submit">Search!</button>
-  </form>
+  <div>
+    <h3>Location Search</h3>
+    <form [formGroup]="userInputLocationForm" (submit)="submitLocationSearch()">
+      <label for="location">Location:</label>
+      <input type="text" id="location" formControlName="location" />
+      <button type="submit">Search!</button>
+    </form>
+  </div>
+  <app-weather-data-display
+    [inputData]="weatherData"
+  ></app-weather-data-display>
 </div>
