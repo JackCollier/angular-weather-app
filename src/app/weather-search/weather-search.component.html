@@ -1,1 +1,9 @@
-<p>weather-search works!</p>
+<div>
+  <h3>Location Search</h3>
+
+  <form [formGroup]="userInputLocationForm" (submit)="submitLocationSearch()">
+    <label for="location">Location:</label>
+    <input type="text" id="location" formControlName="location" />
+    <button type="submit">Search!</button>
+  </form>
+</div>
