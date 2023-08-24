@@ -1,1 +1,9 @@
-<p>weather-data-display works!</p>
+<div>
+  <h3>{{ inputData?.request.query }}</h3>
+  <div>
+    <p>Description: {{ inputData?.current.weather_descriptions[0] }}</p>
+    <p>Temperature in Degrees Celcius: {{ inputData?.current.temperature }}</p>
+    <p>Feels like in Degrees Celcius: {{ inputData?.current.feelslike }}</p>
+    <p>Location searched: {{ inputData?.location.name }}</p>
+  </div>
+</div>
